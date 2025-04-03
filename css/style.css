@@ -43,10 +43,13 @@
     --middle-color: #80B9B1;
     --third-color: #638773;
     --fourth-color: #dbd8d2;
+    --sixth-color: #94C8B4;
     --paragraph-text-size: 1.125rem;
     --fifty-pixel-font-size: 3.125rem;
     --ceve-pixel-font-size: 7.5rem; /* 120px */
     --trente-pixel-font-size: 1.875rem; /* 30px */
+    --twenty-pixel-font-size: 1.25rem; /* 20px */
+    --ten-pixel-font-size: 0.625rem; /* 10px */
 }
 
 
@@ -784,6 +787,16 @@ footer {
     width: 40px;
     vertical-align: middle;
     object-fit: cover;
+    
+}
+
+.skills-list-item-tool {
+    cursor: pointer;
+}
+
+.skills-list-item-tool:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .skills-list {
@@ -861,6 +874,310 @@ footer {
 
 .skills-list-item-tool p {
     justify-content: center;
+    color: var(--text-color);
+}
+
+.language-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--fifty-pixel-font-size);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80.5%;
+}
+
+.language-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--fifty-pixel-font-size);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.language-section-header-text {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    color: var(--secondary-color);
+    text-align: left;
+    align-self: flex-start;
+    width: 70%;
+    letter-spacing: -2px;
+    word-spacing: 0.05rem; 
+    margin-bottom: 2rem;
+
+}
+
+.languages-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 30px;
+    height: 15.625rem;
+    padding: 20px;
+}
+
+.languages-list img {
+    height: 50px;
+    width: 50px;
+}
+
+.language {
+    font-family: 'Helvetica', sans-serif;
+    font-size: var(--paragraph-text-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25em;
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    color: var(--secondary-color);
+}
+
+.french:hover, .malagasy:hover{
+    opacity: 0.8;
+}
+
+.french {
+    background-color: var(--middle-color);
+}
+
+.english {
+    background-color: var(--background-color);
+}
+
+.malagasy {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 2.7rem;
+    width: 80.5%;
+}
+
+.timeline-header {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.cards-timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.7rem;
+    width: 100%;
+    flex-direction: column;
+    padding: var(--fifty-pixel-font-size);
+    position: relative;
+}
+
+.card-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-text-box {
+    width: 28.0625rem;
+    height: 15.875rem;
+    border-radius: 20px;
+    padding: var(--trente-pixel-font-size);
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.card-text-box:hover {
+    opacity: 1;
+}
+
+.card-text-company {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--twenty-pixel-font-size);
+    color: var(--text-color);
+    width: 100%;
+    letter-spacing: -2px;
+    word-spacing: 0.05rem; 
+    margin-bottom: 0.5rem;
+}
+
+.card-text-job {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--trente-pixel-font-size);
+    color: var(--text-color);
+    width: 100%;
+    letter-spacing: -2px;
+    word-spacing: 0.05rem; 
+    margin-bottom: 1rem;
+}
+
+.card-text-about{
+    font-family: 'Helvetica', sans-serif;
+    color: var(--text-color);
+    width: 100%;
+    line-height: 1.4;
+}
+
+.right-container {
+    left: 25%;
+}
+.left-container {
+    left: -25%;
+}
+
+.date {
+    height: 78px;
+    width: 78px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Yeseva One', sans-serif;
+    color: var(--secondary-color);
+    position: absolute;
+    right: -39px;
+    top: 32px;
+    z-index: 10;
+    background-color: var(--background-color);
+}
+
+.right-container .date{
+    left: -39px;
+}
+
+.right-container .card-text-box {
+    left: -5%;
+}
+.left-container .card-text-box {
+    left: 5%;
+}
+
+.right-container .card-text-box:hover {
+    left: 0;  /* This will center it on hover */
+}
+
+.left-container .card-text-box:hover {
+    left: 0;  /* This will center it on hover */
+}
+
+.show-box {
+    left: 0;
+}
+
+.cards-timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    height: 90%;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    
+}
+
+.card-text-box-1 {
+    background-color: var(--third-color);
+}
+
+.card-text-box-1 .card-text-company {
+    color: var(--text-color);
+}
+
+.card-text-box-1 .card-text-job {
+    color: var(--sixth-color);
+}
+
+.card-text-box-1 .card-text-about{
+    color: var(--sixth-color);
+}
+
+.card-text-box-2 {
+    background-color: var(--primary-color);
+}
+
+.card-text-box-2 .card-text-company {
+    color: var(--third-color);
+}
+
+.card-text-box-2 .card-text-job {
+    color: var(--secondary-color);
+}
+
+.card-text-box-2 .card-text-about{
+    color: var(--secondary-color);
+}
+
+.card-text-box-3 {
+    background-color: var(--fourth-color);
+}
+
+
+.card-text-box-3 .card-text-company {
+    color: var(--middle-color);
+}
+
+.card-text-box-3 .card-text-job {
+    color: var(--third-color);
+}
+
+.card-text-box-3 .card-text-about{
+    color: var(--third-color);
+}
+
+.card-text-box-4 {
+    background-color: var(--middle-color);
+}
+
+.card-text-box-4 .card-text-company {
+    color: var(--third-color);
+}
+
+.card-text-box-4 .card-text-job {
+    color: var(--secondary-color);
+}
+
+.card-text-box-4 .card-text-about{
+    color: var(--secondary-color);
+}
+
+.card-text-box-5 {
+    background-color: var(--secondary-color);
+}
+
+.card-text-box-5 .card-text-company {
+    color: var(--primary-color);
+}
+
+.card-text-box-5 .card-text-job {
+    color: var(--text-color);
+}
+
+.card-text-box-5 .card-text-about{
     color: var(--text-color);
 }
 
