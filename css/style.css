@@ -1,0 +1,642 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/fonts/Helvetica.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Britney';
+    src: url('/fonts/Britney-Variable.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#animation1 {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+}
+#animation2 {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+}
+#animation3 {
+    width: 320px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+:root {
+    --primary-color: #C3C98D;
+    --secondary-color: #33233F;
+    --text-color: #DBD8D2;
+    --background-color: #E0E0DC;
+    --middle-color: #80B9B1;
+    --third-color: #638773;
+    --fourth-color: #dbd8d2;
+    --paragraph-text-size: 1.125rem;
+    --fifty-pixel-font-size: 3.125rem;
+    --ceve-pixel-font-size: 7.5rem; /* 120px */
+    --trente-pixel-font-size: 1.875rem; /* 30px */
+}
+
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Helvetica', sans-serif;
+    width: 100%;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+section {
+    width: 80.5%;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+}
+
+
+header {
+    height: auto;
+    padding: 20px 60px;
+    background-color: var(--secondary-color);
+    width: 80.5%;
+    border-radius: 20px;
+    z-index: 1000;
+    position: fixed;
+    left: 50%;  
+    top: 1.825rem;
+    transform: translate(-50%, 0); /* Stay centered, move only on Y */
+    transition: transform 0.5s ease, opacity 0.5s ease, display 1s ease-in;
+}
+
+/* Hide the header when scrolling down */
+.header-hidden {
+    transform: translate(-50%, -100%); /* Move straight up */
+    opacity: 0;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.menu-icon {
+
+    width: 20px;
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    position: relative;
+}
+
+.menu-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    border-radius: 2px;
+}
+
+/* Transform lines into a cross when active */
+.menu-icon.active span:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+}
+
+.menu-icon.active span:nth-child(2) {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    color: var(--text-color);
+}
+
+nav ul li a {
+    color: var(--text-color);
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.logo {
+    font-family: 'Send Flowers', sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* .header-mobile {
+    display: none;
+    width: 100%;
+    z-index: 999; 
+    padding: 20px 0;
+    margin-top: 2rem;
+    transition: all 1s ease-in;
+} */
+
+.header-mobile nav ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    gap: 20px;
+}
+
+.header-mobile {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out, margin 0.5s ease-in-out;
+}
+
+/* When active */
+.header-mobile.active {
+    margin-top: 2rem;
+    opacity: 1;
+    max-height: 500px; /* Adjust as needed */
+}
+
+
+footer {
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    max-width: 80.5%;
+    height: 550px;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+}
+
+.footer-container {
+    max-width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.footer-div {
+    position: relative;
+    width: 80%;
+    height: 70%;
+    left: 5%;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+}
+
+.footer-header {
+    font-family: 'Send Flowers', sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.footer-link-header {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.footer-link ul li a {
+    color: var(--text-color);
+}
+
+.ph-fill {
+    font-size: 24px; /* Adjust size */
+    color: var(--primary-color); /* Change color */
+    margin-right: 8px; /* Space between icon and text */
+    vertical-align: middle;
+}
+
+.contacts .footer-link-header {
+    color: transparent;
+}
+
+
+.footer-link ul li{
+    margin-bottom: 1rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.terms {
+    color: var(--primary-color);
+}
+
+.home-hero {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74vh;
+    background-color: var(--secondary-color);
+}
+
+.home-hero-text {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-hero-text-header {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: 5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2.55rem;
+    width: 70%;
+    line-height: 1.1;
+}
+
+.home-hero-text-header-span {
+    font-family: 'Britney', sans-serif;
+}
+
+.home-hero-text-description {
+    width: 60%;
+    color: var(--text-color);
+    text-align: center;
+    font-size: var(--paragraph-text-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.home-about {
+    display: flex;
+    background-color: var(--primary-color);
+    height: 74vh;
+}
+
+.my-image {
+    width: 50%;
+    height: 100%;
+}
+
+.my-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.home-about-text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+    gap: 2.7rem;
+}
+
+.home-about-text-header {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    color: var(--secondary-color);
+    text-align: left;
+    align-self: flex-start;
+    width: 70%;
+    letter-spacing: -2px;
+    word-spacing: 0.05rem; 
+}
+
+.home-about-text-content{
+    font-size: var(--paragraph-text-size);
+    color: var(--secondary-color);
+    line-height: 1.5;
+    font-weight: 100;
+    letter-spacing: -0.5px;
+}
+
+
+.home-section-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 154px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    color: var(--primary-color);
+    border-radius: 30px;
+    align-self: flex-start;
+    border: 2px solid var(--secondary-color);
+}
+
+.ph-arrow-right {
+    font-size: 24px;
+    color: var(--primary-color);
+    vertical-align: middle;
+}
+
+.home-section-button:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+.home-section-button:hover .ph-arrow-right{
+    color: var(--secondary-color);
+}
+
+.home-services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74vh;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 2.7rem;
+}
+
+.home-services-header {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+    line-height: 1.2;
+    position: relative;
+}
+
+
+.home-services-cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-services-card {
+    width: 400px;
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100px;
+    border-radius: 20px;
+    transition: all 0.5s;
+    padding: 30px;
+}
+
+.home-services-card:hover {
+    transform: rotate(5deg);
+}
+
+.card-number {
+    font-size: var(--ceve-pixel-font-size);
+    font-family: 'Yeseva One', sans-serif;
+    letter-spacing: -0.5;
+}
+
+.home-services-card-title {
+    top: -13%;
+    position: relative;
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--trente-pixel-font-size);
+    padding: 20px;
+    margin-bottom: 2rem;
+}
+
+.home-services-card-title::after {
+    content: '';
+    position: absolute;
+    background-color: var(--text-color);
+    width: 50px;
+    height: 4px;
+    border-radius: 30px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hsct1 {
+    color: var(--text-color);
+}
+
+
+.home-services-card-content {
+    width: 269px;
+    line-height: 1.6;
+    padding: 5px;
+    text-align: center;
+    top: -13%;
+    position: relative;
+}
+
+.card1 {
+    background-color: var(--secondary-color);
+}
+
+.n1 {
+    background: linear-gradient(to bottom,#473059, #473059, #473059, transparent, transparent);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.home-services-card-1 {
+    color: var(--text-color);
+}
+
+
+.card2 {
+    background-color: var(--middle-color);
+}
+
+.n2 {
+    background: linear-gradient(to bottom,#74ABA4, #74ABA4, #74ABA4, transparent, transparent);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.home-services-card-2 {
+    color: var(--secondary-color);
+}
+
+.hsct2 {
+    color: var(--secondary-color);
+}
+
+.card3 {
+    background-color: var(--third-color);
+}
+
+.n3 {
+    background: linear-gradient(to bottom,#557863, #557863, #557863, transparent, transparent);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.home-services-card-3 {
+    color: var(--text-color);
+}
+
+.hsct3 {
+    color: var(--text-color);
+}
+
+.home-portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 74vh;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 2.7rem;
+}
+
+.home-portfolio-header {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.home-portfolio-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--fourth-color);
+    border-radius: 20px;
+}
+
+.home-portfolio-slideshow{
+    height: 100%;
+    width: 50%;
+}
+
+.home-portfolio-slideshow img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+.home-portfolio-text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+    gap: 2.7rem;
+}
+
+.home-portfolio-text-header {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--trente-pixel-font-size);
+    color: var(--secondary-color);
+    text-align: left;
+    align-self: flex-start;
+    width: 70%;
+    letter-spacing: -2px;
+    word-spacing: 0.05rem; 
+}
+
+.home-portfolio-text-content{
+    color: var(--secondary-color);
+    line-height: 1.5;
+    font-weight: 100;
+    letter-spacing: -0.5px;
+    align-self: flex-start;
+}
+
+
+.home-personal-portfolio {
+    height: 74vh;
+    display: flex;
+    background-color: var(--fourth-color);
+    border-radius: 20px;
+}
+
+.home-personal-portfolio-slideshow {
+    height: 100%;
+    width: 50%;
+}
+
+.home-personal-portfolio-slideshow img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.home-personal-portfolio-text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+    gap: 2.7rem;
+}
+
+
+@media (max-width: 955px) {
+    .header-main nav{
+        display: none; /* Hide the header on mobile */
+    }
+
+    .menu-icon {
+        display: flex; /* Show the menu icon on mobile */
+    }
+    
+}
+
+@media (min-width: 300px) {
+    header, section {
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
