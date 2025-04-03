@@ -633,7 +633,7 @@ footer {
 }
 
 @media (min-width: 300px) {
-    header, section {
+ section {
         width: 98%;
         margin-left: auto;
         margin-right: auto;
