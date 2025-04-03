@@ -102,4 +102,19 @@ function toggleMenu() {
     mobileMenu.classList.toggle("active");
 }
 
+document.addEventListener("scroll", function () {
+    document.querySelectorAll(".skills-list-item").forEach((card, index) => {
+        let rect = card.getBoundingClientRect();
+        
+        if (rect.top <= 20) { // When the card reaches the top
+            card.style.transform = `rotate(${(index % 2 === 0 ? 1 : -1)}deg)`; // Alternating rotations
+        } else {
+            card.style.transform = "rotate(0deg)"; // Reset rotation if it's not at the top
+        }
+    });
+});
+
+
+
+
 
