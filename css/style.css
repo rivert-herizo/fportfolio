@@ -50,6 +50,7 @@
     --trente-pixel-font-size: 1.875rem; /* 30px */
     --twenty-pixel-font-size: 1.25rem; /* 20px */
     --ten-pixel-font-size: 0.625rem; /* 10px */
+    --three-hundred-eight: 19.25rem; /* 308px */
 }
 
 
@@ -1179,6 +1180,87 @@ footer {
 
 .card-text-box-5 .card-text-about{
     color: var(--text-color);
+}
+
+.education {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 2.7rem;
+    width: 80.5%;
+}
+
+.education-header {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.education-list {
+    display: flex;
+    gap: var(--twenty-pixel-font-size);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.education-item {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    flex-direction: column;
+    gap: var(--trente-pixel-font-size);
+    padding: 3.75rem;
+    border-radius: 20px;
+    height: var(--three-hundred-eight);
+}
+
+.education-item-header {
+    font-size: 2.1875rem; /* 35px */
+    font-family: 'Yeseva One', sans-serif;
+    font-weight: ;
+    letter-spacing: -2px;
+    line-height: 1.2;
+}
+
+.ed-1 {
+    background-color: var(--fourth-color);
+    color: var(--third-color);
+}
+
+.ed-2 {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.75rem;
+    height: 3.5rem;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    color: var(--text-color);
+    border-radius: 30px;
+    border: 2px solid var(--secondary-color);
+}
+
+.resume-link:hover {
+    opacity: 0.8;
 }
 
 @media (max-width: 955px) {
