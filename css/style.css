@@ -397,6 +397,7 @@ footer {
     flex-direction: column;
     padding-top: 20px;
     gap: 2.7rem;
+    margin-top: 4rem;
 }
 
 .home-services-header {
@@ -537,6 +538,7 @@ footer {
     flex-direction: column;
     padding-top: 60px;
     gap: 2.7rem;
+    margin-top: 4rem;
 }
 
 .home-portfolio-header {
@@ -608,6 +610,7 @@ footer {
     display: flex;
     background-color: var(--fourth-color);
     border-radius: 20px;
+    margin-top: 5rem;
 }
 
 .home-personal-portfolio-slideshow {
@@ -1401,7 +1404,7 @@ footer {
     font-family: "Yeseva One", sans-serif;
     font-size: var(--twenty-pixel-font-size);
     width: 100%;
-    height: 100%;
+    height: 100%;   
 }
 
 .writing-part-two-image {
@@ -1423,6 +1426,7 @@ footer {
     align-items: flex-start;
     gap: var(--twenty-pixel-font-size);
     flex-direction: column;
+    align-self: flex-start;
 }
 
 .ph-duotone {
@@ -1580,8 +1584,8 @@ footer {
     background-color: var(--secondary-color);
     border-radius: var(--ten-pixel-font-size);
     padding: var(--ten-pixel-font-size);
-
 }
+
 .services-assistantship {
     width: 80.5%;
     display: flex;
