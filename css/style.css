@@ -641,7 +641,7 @@ footer {
     height: auto;
     background-color: var(--primary-color);
     width: 80.5%;
-    margin-top: 8rem;
+    margin-top: 7.25rem;
 }
 
 .about-hero-container {
@@ -750,7 +750,7 @@ footer {
     justify-content: center;
     height: auto;
     width: 80.5%;
-    margin-top: 12rem;
+    margin-top: 11rem;
 }
 
 .skills-hero-container {
