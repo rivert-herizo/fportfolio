@@ -51,6 +51,8 @@
     --twenty-pixel-font-size: 1.25rem; /* 20px */
     --ten-pixel-font-size: 0.625rem; /* 10px */
     --three-hundred-eight: 19.25rem; /* 308px */
+    --services-navbar-height: 3.75rem; /* 50px */
+    --services-navbar-width: 26.5rem; /* 100% */
 }
 
 
@@ -1261,6 +1263,469 @@ footer {
 
 .resume-link:hover {
     opacity: 0.8;
+}
+
+.services-hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 9rem;
+    gap: 2.7rem;
+}
+
+.services-hero-header {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.services-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: var(--services-navbar-height);
+    background-color: var(--secondary-color);
+    padding: 10px;    
+    border-radius: 20px;
+}
+
+.services-navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: var(--ten-pixel-font-size);
+}
+
+.services-navbar ul li{
+    color: var(--primary-color);
+    border-radius: 15px;
+    line-height: 1.5;
+    padding: 10px 10px;
+}
+
+.services-navbar ul li.active {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 30px;
+}
+
+.services-creative-writing {
+    width: 80.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.writing-part-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 257px; /* 4.03125rem */
+}
+
+.writing-part-one-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: 40%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+    padding: var(--fifty-pixel-font-size);
+}
+
+.writing-part-one-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fourth-color);
+    color: var(--secondary-color);
+    width: 60%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+    padding: var(--fifty-pixel-font-size);
+}
+
+.writing-part-one-content p {
+    line-height: 1.5;
+    text-align: left;
+}
+
+.writing-header-text {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+    line-height: 1.2;
+}
+
+.type-writing {
+    text-align: left;
+}
+
+.writing-part-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 257px;
+} 
+
+.writing-part-two-services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--fourth-color);
+    color: var(--secondary-color);
+    width: 50%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+    padding: var(--fifty-pixel-font-size);
+    gap: var(--sixty-pixel-font-size);
+}
+
+.service-header {
+    color: var(--secondary-color);
+    font-family: "Yeseva One", sans-serif;
+    font-size: var(--twenty-pixel-font-size);
+    width: 100%;
+    height: 100%;
+}
+
+.writing-part-two-image {
+    width: 50%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+}
+
+.writing-part-two-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--twenty-pixel-font-size);
+}
+
+.service-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--twenty-pixel-font-size);
+    flex-direction: column;
+}
+
+.ph-duotone {
+    color: var(--primary-color);
+}
+
+.service-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--ten-pixel-font-size);
+    flex-direction: column;
+}
+
+.service-item li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--ten-pixel-font-size);
+    color: var(--primary-color);
+    font-family: 'Helvetica', sans-serif;
+    background-color: var(--secondary-color);
+    border-radius: var(--ten-pixel-font-size);
+    padding: var(--ten-pixel-font-size);
+
+}
+
+.services-story-editing {
+    width: 80.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.editing-part-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 257px; /* 4.03125rem */
+}
+
+.editing-part-one-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--third-color);
+    color: var(--primary-color);
+    width: 35%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+    padding: var(--fifty-pixel-font-size);
+}
+
+.editing-part-one-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fourth-color);
+    color: var(--secondary-color);
+    width: 65%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+    padding: var(--fifty-pixel-font-size);
+}
+
+.editing-part-one-content p {
+    line-height: 1.5;
+    text-align: left;
+}
+
+.editing-header-text {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    letter-spacing: -2px;
+    line-height: 1.2;
+}
+
+.type-editing {
+    text-align: left;
+}
+
+.editing-part-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 257px;
+} 
+
+.editing-part-two-services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--fourth-color);
+    color: var(--secondary-color);
+    width: 50%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+    padding: var(--fifty-pixel-font-size);
+    gap: var(--sixty-pixel-font-size);
+}
+
+.service-header {
+    color: var(--secondary-color);
+    font-family: "Yeseva One", sans-serif;
+    font-size: var(--twenty-pixel-font-size);
+    width: 100%;
+    height: 100%;
+}
+
+.editing-part-two-image {
+    width: 50%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+}
+
+.editing-part-two-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--twenty-pixel-font-size);
+}
+
+.service-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--twenty-pixel-font-size);
+    flex-direction: column;
+}
+
+.ph-duotone {
+    color: var(--primary-color);
+}
+
+.service-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--ten-pixel-font-size);
+    flex-direction: column;
+}
+
+.service-item li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--ten-pixel-font-size);
+    color: var(--primary-color);
+    font-family: 'Helvetica', sans-serif;
+    background-color: var(--secondary-color);
+    border-radius: var(--ten-pixel-font-size);
+    padding: var(--ten-pixel-font-size);
+
+}
+.services-assistantship {
+    width: 80.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.assistantship-part-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 257px; /* 4.03125rem */
+}
+
+.assistantship-part-one-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    width: 35%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+    padding: var(--fifty-pixel-font-size);
+}
+
+.assistantship-part-one-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fourth-color);
+    color: var(--secondary-color);
+    width: 65%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+    padding: var(--fifty-pixel-font-size);
+}
+
+.assistantship-part-one-content p {
+    line-height: 1.5;
+    text-align: left;
+}
+
+.assistantship-header-text {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    letter-spacing: -2px;
+    line-height: 1.2;
+}
+
+.type-assistantship {
+    text-align: left;
+}
+
+.assistantship-part-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 257px;
+} 
+
+.assistantship-part-two-services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--fourth-color);
+    color: var(--secondary-color);
+    width: 50%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+    padding: var(--fifty-pixel-font-size);
+    gap: var(--sixty-pixel-font-size);
+}
+
+.service-header {
+    color: var(--secondary-color);
+    font-family: "Yeseva One", sans-serif;
+    font-size: var(--twenty-pixel-font-size);
+    width: 100%;
+    height: 100%;
+}
+
+.assistantship-part-two-image {
+    width: 50%;
+    height: 100%;
+    border-radius: var(--twenty-pixel-font-size);
+}
+
+.assistantship-part-two-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--twenty-pixel-font-size);
+}
+
+.service-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--twenty-pixel-font-size);
+    flex-direction: column;
+}
+
+.ph-duotone {
+    color: var(--primary-color);
+}
+
+.service-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--ten-pixel-font-size);
+    flex-direction: column;
+}
+
+.service-item li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--ten-pixel-font-size);
+    color: var(--primary-color);
+    font-family: 'Helvetica', sans-serif;
+    background-color: var(--secondary-color);
+    border-radius: var(--ten-pixel-font-size);
+    padding: var(--ten-pixel-font-size);
+
+}
+
+.service-section.active {
+    display: flex;
+}
+
+.service-section {
+    display: none;
 }
 
 @media (max-width: 955px) {
