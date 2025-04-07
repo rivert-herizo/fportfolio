@@ -1307,6 +1307,7 @@ footer {
     border-radius: 15px;
     line-height: 1.5;
     padding: 10px 10px;
+    cursor: pointer;
 }
 
 .services-navbar ul li.active {
@@ -1476,10 +1477,10 @@ footer {
     flex-direction: column;
     background-color: var(--third-color);
     color: var(--primary-color);
-    width: 35%;
+    width: 30%;
     height: 100%;
     border-radius: var(--twenty-pixel-font-size);
-    padding: var(--fifty-pixel-font-size);
+    padding: auto;
 }
 
 .editing-part-one-content {
@@ -1488,7 +1489,7 @@ footer {
     align-items: center;
     background-color: var(--fourth-color);
     color: var(--secondary-color);
-    width: 65%;
+    width: 70%;
     height: 100%;
     border-radius: var(--twenty-pixel-font-size);
     padding: var(--fifty-pixel-font-size);
@@ -1502,8 +1503,6 @@ footer {
 .editing-header-text {
     font-family: 'Yeseva One', sans-serif;
     font-size: var(--fifty-pixel-font-size);
-    letter-spacing: -2px;
-    line-height: 1.2;
 }
 
 .type-editing {
@@ -1659,7 +1658,7 @@ footer {
     align-items: center;
     background-color: var(--fourth-color);
     color: var(--secondary-color);
-    width: 50%;
+    width: 45%;
     height: 100%;
     border-radius: var(--twenty-pixel-font-size);
     padding: var(--fifty-pixel-font-size);
@@ -1675,7 +1674,7 @@ footer {
 }
 
 .assistantship-part-two-image {
-    width: 50%;
+    width: 55%;
     height: 100%;
     border-radius: var(--twenty-pixel-font-size);
 }
@@ -1717,7 +1716,6 @@ footer {
     background-color: var(--secondary-color);
     border-radius: var(--ten-pixel-font-size);
     padding: var(--ten-pixel-font-size);
-
 }
 
 .service-section.active {

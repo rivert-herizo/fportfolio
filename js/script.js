@@ -134,58 +134,72 @@ timeline_cards.forEach(card => {
     observer.observe(card);
 });
 
+// var service_nav = document.querySelectorAll('.service-nav');
+// var service_section = document.querySelectorAll('.service-section');
+
+// var service_nav_1 = document.querySelector('.service-nav-1');
+// var service_nav_2 = document.querySelector('.service-nav-2');
+// var service_nav_3 = document.querySelector('.service-nav-3');
+
+// var service_section_1 = document.querySelector('.service-section-one');
+// var service_section_2 = document.querySelector('.service-section-two');
+// var service_section_3 = document.querySelector('.service-section-three');
+
+// service_nav_1.addEventListener('click', function (e) {
+//     service_section.forEach(section => {
+//         section.style.display = 'none'; // Hide all sections initially
+//     });
+//     // Show the selected section
+
+//     service_nav.forEach(nav => {
+//         nav.classList.remove('active'); // Remove active class from all nav items
+//     });
+
+//     service_nav_1.classList.add('active'); // Add active class to the clicked nav item
+//     service_section_1.style.display = 'flex';  // Hide all sections initially
+// });
+
+// service_nav_2.addEventListener('click', function (e) {
+//     service_section.forEach(section => {
+//         section.style.display = 'none'; // Hide all sections initially
+//     });
+//     // Show the selected section
+
+//     service_nav.forEach(nav => {
+//         nav.classList.remove('active'); // Remove active class from all nav items
+//     });
+
+//     service_nav_2.classList.add('active'); // Add active class to the clicked nav item
+//     service_section_2.style.display = 'flex';  // Hide all sections initially
+// });
+
+// service_nav_3.addEventListener('click', function (e) {
+//     service_section.forEach(section => {
+//         section.style.display = 'none'; // Hide all sections initially
+//     });
+//     // Show the selected section
+//     service_nav.forEach(nav => {
+//         nav.classList.remove('active'); // Remove active class from all nav items
+//     });
+
+//     service_nav_3.classList.add('active'); // Add active class to the clicked nav item
+
+//     service_section_3.style.display = 'flex';  // Hide all sections initially
+// });
+
 var service_nav = document.querySelectorAll('.service-nav');
 var service_section = document.querySelectorAll('.service-section');
 
-var service_nav_1 = document.querySelector('.service-nav-1');
-var service_nav_2 = document.querySelector('.service-nav-2');
-var service_nav_3 = document.querySelector('.service-nav-3');
-
-var service_section_1 = document.querySelector('.service-section-one');
-var service_section_2 = document.querySelector('.service-section-two');
-var service_section_3 = document.querySelector('.service-section-three');
-
-service_nav_1.addEventListener('click', function (e) {
-    service_section.forEach(section => {
-        section.style.display = 'none'; // Hide all sections initially
+service_nav.forEach((nav, index) => {
+    nav.addEventListener('click', function () {
+        service_section.forEach(section => section.style.display = 'none'); // Hide all sections
+        service_nav.forEach(navItem => navItem.classList.remove('active')); // Remove active class
+        
+        nav.classList.add('active'); // Add active class to clicked nav item
+        service_section[index].style.display = 'flex'; // Show corresponding section
     });
-    // Show the selected section
-
-    service_nav.forEach(nav => {
-        nav.classList.remove('active'); // Remove active class from all nav items
-    });
-
-    service_nav_1.classList.add('active'); // Add active class to the clicked nav item
-    service_section_1.style.display = 'flex';  // Hide all sections initially
 });
 
-service_nav_2.addEventListener('click', function (e) {
-    service_section.forEach(section => {
-        section.style.display = 'none'; // Hide all sections initially
-    });
-    // Show the selected section
-
-    service_nav.forEach(nav => {
-        nav.classList.remove('active'); // Remove active class from all nav items
-    });
-
-    service_nav_2.classList.add('active'); // Add active class to the clicked nav item
-    service_section_2.style.display = 'flex';  // Hide all sections initially
-});
-
-service_nav_3.addEventListener('click', function (e) {
-    service_section.forEach(section => {
-        section.style.display = 'none'; // Hide all sections initially
-    });
-    // Show the selected section
-    service_nav.forEach(nav => {
-        nav.classList.remove('active'); // Remove active class from all nav items
-    });
-
-    service_nav_3.classList.add('active'); // Add active class to the clicked nav item
-
-    service_section_3.style.display = 'flex';  // Hide all sections initially
-});
 
 
 
