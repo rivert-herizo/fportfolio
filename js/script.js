@@ -34,7 +34,7 @@ var animation1 = lottie.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '../images/write-animation.json'
+    path: 'js/lottie/write-animation.json'
 });
 
 var animation2 = lottie.loadAnimation({
@@ -42,7 +42,7 @@ var animation2 = lottie.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '../images/pieces-animation.json'
+    path: 'js/lottie/pieces-animation.json'
 });
 
 var animation3 = lottie.loadAnimation({
@@ -50,7 +50,7 @@ var animation3 = lottie.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '../images/scene-animation.json'
+    path: 'js/lottie/scene-animation.json'
 });
 
 
