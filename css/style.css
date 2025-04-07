@@ -72,7 +72,7 @@ section {
     max-width: 80.5%;
     margin: 0 auto;
     border-radius: 20px;
-    margin-bottom: 5rem;
+    margin-bottom: 1.25rem;
 }
 
 
@@ -263,7 +263,7 @@ footer {
 }
 
 .home-hero {
-    margin-top: 8rem;
+    margin-top: 7.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -355,7 +355,6 @@ footer {
     letter-spacing: -0.5px;
 }
 
-
 .home-section-button {
     display: flex;
     justify-content: space-between;
@@ -408,7 +407,6 @@ footer {
     line-height: 1.2;
     position: relative;
 }
-
 
 .home-services-cards{
     width: 100%;
