@@ -1249,6 +1249,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 10vh;
+    position: relative;
 }
 
 .resume-link {
@@ -1730,6 +1731,81 @@ footer {
 .service-section {
     display: none;
 }
+
+.ph-feather {
+    position: absolute;
+}
+
+
+.feather-one, .feather-two, .feather-three {
+    transition: transform 2.5s ease-in-out; /* Smooth rotation transition */
+}
+
+.feather-one {
+    font-size: 10rem;
+    color: var(--third-color);
+    transform: rotate(-120deg);
+    top: 11rem;
+    left: 15%;
+}
+
+.feather-one::after {
+    content: '';
+    position: absolute; /* Transparent background */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+}
+
+.feather-two {
+    font-size: 4.125rem;
+    color: var(--third-color);
+    transform: rotate(113deg);
+    top: 10rem;
+    left: 62%;
+    font-weight: 500;
+}
+
+.feather-three {
+    font-size:  7.5rem;
+    color: var(--primary-color);
+    transform: rotate(16deg);
+    top: 19rem;
+    left: 80%;
+    font-weight: 550;
+    z-index: 15;
+
+}
+
+.feather-three:hover {
+    transform: scale(1.3);
+    rotate: 30deg;
+}
+
+.feather-four {
+    font-size:  14rem;
+    color: var(--primary-color);
+    transform: rotate(-10deg);
+    top: -1.7rem;
+    left: 57%;
+    font-weight: 550;
+    z-index: -3;
+}
+
+.feather-four::after {
+    content: '';
+    position: absolute; /* Transparent background */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+}
+
 
 @media (max-width: 955px) {
     .header-main nav{

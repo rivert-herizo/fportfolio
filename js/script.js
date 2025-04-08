@@ -201,6 +201,55 @@ service_nav.forEach((nav, index) => {
 });
 
 
+// Select the elements
+// const featherOne = document.querySelector('.feather-one');
+// const featherTwo = document.querySelector('.feather-two');
+// const featherThree = document.querySelector('.feather-three');
+
+// Add a scroll event listener
+// window.addEventListener('scroll', () => {
+//     const scrollPosition = window.scrollY; 
+
+//     if (scrollPosition > 0) {
+//         featherOne.style.transform = 'rotate(-100deg)'; 
+//         featherTwo.style.transform = 'rotate(93deg)'; 
+//         featherThree.style.transition = 'transform 3s ease';
+//         featherThree.style.transform = 'rotate(-3deg)'; 
+//     } else {
+//         featherOne.style.transform = 'rotate(-120deg)';
+//         featherTwo.style.transform = 'rotate(113deg)';
+//         featherThree.style.transition = 'transform 3s ease';
+//         featherThree.style.transform = 'rotate(16deg)';
+//     }
+// });
+
+// Select all feathers
+const featherOne = document.querySelector('.feather-one');
+const featherTwo = document.querySelector('.feather-two');
+const featherThree = document.querySelector('.feather-three');
+
+// Track rotation state
+let featherOneRotation = -120; // Initial rotation value for feather-one
+let featherTwoRotation = 113;  // Initial rotation value for feather-two
+let featherThreeRotation = 16; // Initial rotation value for feather-three
+
+// Add scroll event listener
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY; // Get current scroll position
+    
+    // Update rotation values
+    featherOneRotation = -120 + scrollPosition * 0.2; // Increase by 0.2 degrees per scroll unit
+    featherTwoRotation = 113 - scrollPosition * 0.2;  // Decrease by 0.2 degrees per scroll unit
+    featherThree.style.transition = 'transform 3s ease';
+    featherThreeRotation = 16 - scrollPosition * 0.2; // Decrease by 0.2 degrees per scroll unit
+
+    // Apply rotation dynamically
+    featherOne.style.transform = `rotate(${featherOneRotation}deg)`;
+    featherTwo.style.transform = `rotate(${featherTwoRotation}deg)`;
+    featherThree.style.transition = 'transform 2.5s ease';
+    featherThree.style.transform = `rotate(${featherThreeRotation}deg)`;
+});
+
 
 
 
