@@ -20,9 +20,40 @@
     />
 </head>
 <body>
-    <div id="header"></div>  <!-- Dynamically loads the header -->
-<!-- Your page content goes here -->
-    <div id="footer"></div>  <!-- Dynamically loads the footer -->
+    <div id="header"></div>  
+    <section class="contact-hero">
+        <div class="contact-content">
+          <div class="contact-hero-header">
+              <p class="contact-header-text">Let’s talk about your next project !</p>
+          </div>
+          <div class="contact-text-big">
+              <p>For any commissions or project inquiries, feel free to contact me at this e-mail address : karinerasa.contact@gmail.com</p>
+          </div>
+          <div class="contact-text-small">
+              <p>Or you can fill this form</p>
+          </div>
+          <form class="contact-form-form" action="" method="POST">
+              <div class="contact-info">
+                <div class="contact-form">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" placeholder="Your name" required>
+                </div>
+                <div class="contact-form">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Your email" required>
+                </div>
+              </div>
+              
+              <div class="contact-form message-form">
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
+              </div>
+              <button type="submit" class="mail-submit">Submit</button>
+          </form>
+        </div>
+        
+    </section>
+    <div id="footer"></div>  
 
     <script src="js/script.js">
         

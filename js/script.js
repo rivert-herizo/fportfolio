@@ -254,16 +254,22 @@ window.addEventListener('scroll', () => {
 
 const boxes = document.querySelectorAll('.ghost-writing-box');
 const modal = document.getElementById('modal');
-const modalTitle = document.getElementById('modal-title');
-const modalType = document.getElementById('modal-type');
+const modalTitle = document.querySelector('.modal-main-title');
+const modalType = document.querySelector('.modal-box-type');
 const modalClose = document.querySelector('.modal-close');
+const modalContent = document.querySelector('.modal-content');
+const modalText = document.querySelector('.modal-head');
 
 boxes.forEach(box => {
     box.addEventListener('click', () => {
-        // const title = box.querySelector('.box-main-title').innerHTML;
-        // const type = box.querySelector('.box-type').innerText;
-        // modalTitle.innerHTML = title;
-        // modalType.innerText = type;
+        const boxtitle = box.querySelector('.box-main-title').innerText;
+        const boxtype = box.querySelector('.box-type').innerText;
+        const boxTextColor = getComputedStyle(box).color;
+        modalTitle.innerHTML = boxtitle;
+        modalType.innerText = boxtype;
+        console.log(getComputedStyle(box).backgroundColor);
+        modalText.style.color = boxTextColor;
+        modalContent.style.backgroundColor = getComputedStyle(box).backgroundColor;
         modal.style.display = 'flex';
     });
 });

@@ -2064,11 +2064,18 @@ footer {
 .modal-content {
     position: relative; /* Important to position the close button inside */
     background-color: white;
-    padding: 30px;
+    padding: 100px 50px;
     border-radius: 20px;
-    width: 600px;
-    height: 600px;
+    width: auto;
+    height: auto;
+    max-width: 600px;
+    max-height: 500px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--trente-pixel-font-size);
 }
 
 .modal-close {
@@ -2083,13 +2090,173 @@ footer {
 .modal .box-content {
     font-family: 'Helvetica', sans-serif;
     font-size: var(--paragraph-text-size);
-    color: var(--secondary-color);
     line-height: 1.5;
     text-align: justify;
     margin-top: 20px;
 }
+
+.modal-main-title {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--trente-pixel-font-size);
+    width: 100%;
+    letter-spacing: -2px;
+    word-spacing: 0.05rem; 
+    margin-bottom: 1rem;
+}
   
-  
+.workbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    height: 40px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    color: var(--primary-color);
+    border-radius: 30px;
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+}
+
+.workbutton:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+.workbutton:hover p{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.workbutton:hover .ph-arrow-right{
+    color: var(--secondary-color);
+}
+
+.contact-hero {
+    margin-top: 7.25rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fourth-color);
+    padding: var(--twenty-pixel-font-size);
+}
+
+.contact-content {
+    width: 35%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    /* border: 3px solid var(--secondary-color); */
+}
+
+.contact-hero-header {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+    line-height: 1.2;
+    position: relative;
+    text-align: center;
+}
+
+.contact-text-big {
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.contact-text-small p{
+    text-align: center;
+    font-size: var(--twenty-pixel-font-size);
+    color: var(--secondary-color);
+    font-family: 'Yeseva One', sans-serif;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    gap: 20px;
+}
+
+.contact-form-form {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.contact-info {
+    width: 100%;
+}
+
+label {
+    font-family: 'Helvetica', sans-serif;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    font-family: 'Helvetica', sans-serif;
+}
+
+input::placeholder {
+    color: var(--third-color);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid skyblue;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--background-color);
+}
+
+.message-form {
+    margin-bottom: var(--twenty-pixel-font-size);
+}
+
+.mail-submit {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    color: var(--secondary-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Helvetica', sans-serif;
+}
 
 @media (max-width: 955px) {
     .header-main nav{
