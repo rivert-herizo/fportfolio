@@ -1806,6 +1806,290 @@ footer {
     -webkit-backdrop-filter: blur(5px); /* For Safari */
 }
 
+.work-hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 9rem;
+    gap: 1rem;
+    height: auto;
+    margin-bottom: 3rem;
+}
+
+.work-hero-personal{
+    /* border: 5px solid var(--secondary-color); */
+    margin-top: 6rem;
+}
+
+.work-hero-header {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.work-text-big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif;
+    flex-direction: column;
+    line-height: 1.2;
+    font-size: var(--paragraph-text-size);
+    color: var(--secondary-color);
+}
+
+.works-section {
+    width: 78%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    /* border: 5px solid var(--secondary-color); */
+}
+
+.work {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+    border-radius: 20px;
+    position: relative;
+    padding: 15px;
+    height: 500px;
+    width: 305px;
+}
+
+.work::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(to top, rgb(0, 0, 0) 10%,rgba(0, 0, 0, 0.902) 20%,rgba(0, 0, 0, 0.779) 25%, rgba(0, 0, 0, 0) 55%);
+    z-index: 0; /* Place it above the image but below the content */
+}
+
+.work-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.work-text {
+    z-index: 100;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.work-text-type {
+    padding: 5px 10px;
+    border: 2px solid var(--text-color);
+    border-radius: 7px;
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+.work-text-header {
+    font-size: var(--twenty-pixel-font-size);
+    color: var(--primary-color);
+    word-spacing: 0.05rem; 
+    width: 100%;
+    font-weight: 600;
+}
+
+.work-text-content, .work-text-origin {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    color: var(--third-color);
+    line-height: 1.5;
+    font-weight: 100;
+    letter-spacing: -0.5px;
+    align-self: flex-start;
+}
+
+.work-end {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.work-text-button {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fourth-color);
+    border-radius: 30px;
+    color: var(--secondary-color);
+    gap: 10px;
+    border: 1px solid var(--fourth-color);
+    cursor: pointer;
+}
+
+.work-text-button .ph-arrow-right {
+    color: var(--secondary-color);
+}
+
+.work-text-button:hover, .work-text-button:hover .ph-arrow-right {
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.ghost-writing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.ghost-writing-boxes {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* or whatever spacing you want */
+    max-width: 100%;
+  }
+  
+  .ghost-writing-box {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .box-main-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+  
+  .box-type {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  
+
+.ghost-writing-box:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+
+}
+
+.box-main-title {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: var(--fifty-pixel-font-size);
+    width: 100%;
+    letter-spacing: -2px;
+    word-spacing: 0.05rem; 
+    margin-bottom: 1rem;
+}
+
+.box-1 {
+    background-color: var(--fourth-color);
+    color: var(--third-color);
+}
+
+.box-2 {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}
+
+.box-3 {
+    background-color: var(--third-color);
+    color: var(--primary-color);
+}
+  
+.box-4 {
+    background-color: var(--middle-color);
+    color: var(--secondary-color);
+}
+
+.box-5 {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.box-6 {
+    background-color: var(--middle-color);
+    color: var(--fourth-color);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+.modal-content {
+    position: relative; /* Important to position the close button inside */
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal .box-content {
+    font-family: 'Helvetica', sans-serif;
+    font-size: var(--paragraph-text-size);
+    color: var(--secondary-color);
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 20px;
+}
+  
+  
 
 @media (max-width: 955px) {
     .header-main nav{

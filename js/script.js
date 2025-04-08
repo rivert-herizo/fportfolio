@@ -252,6 +252,36 @@ window.addEventListener('scroll', () => {
 
 
 
+const boxes = document.querySelectorAll('.ghost-writing-box');
+const modal = document.getElementById('modal');
+const modalTitle = document.getElementById('modal-title');
+const modalType = document.getElementById('modal-type');
+const modalClose = document.querySelector('.modal-close');
+
+boxes.forEach(box => {
+    box.addEventListener('click', () => {
+        // const title = box.querySelector('.box-main-title').innerHTML;
+        // const type = box.querySelector('.box-type').innerText;
+        // modalTitle.innerHTML = title;
+        // modalType.innerText = type;
+        modal.style.display = 'flex';
+    });
+});
+
+modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+
+
+
+
 
 
 
