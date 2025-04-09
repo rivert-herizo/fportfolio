@@ -61,6 +61,7 @@ body {
     background-color: var(--background-color);
     font-family: 'Helvetica', sans-serif;
     width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -69,15 +70,14 @@ a {
 }
 
 section {
-    width: 80.5%;
-    max-width: 80.5%;
+    width: 95%;
     margin: 0 auto;
     border-radius: 20px;
     margin-bottom: 1.25rem;
 }
 
 
-header {
+/* header {
     height: auto;
     padding: 20px 60px;
     background-color: var(--secondary-color);
@@ -88,9 +88,39 @@ header {
     position: fixed;
     left: 50%;  
     top: 1.825rem;
-    transform: translate(-50%, 0); /* Stay centered, move only on Y */
+    transform: translate(-50%, 0); 
+    transition: transform 0.5s ease, opacity 0.5s ease, display 1s ease-in;
+} */
+
+/* header {
+    height: auto;
+    padding: 20px 60px;
+    background-color: var(--secondary-color);
+    width: 97%;
+    border-radius: 20px;
+    z-index: 1000;
+    position: fixed;
+    left: 50%;
+    top: 1.825rem;
+    transform: translate(-50%, 0);
+    transition: transform 0.5s ease, opacity 0.5s ease, display 1s ease-in;
+  } */
+
+  header {
+    width: 95%;
+    max-width: 95%;
+    height: auto;
+    padding: 20px 5vw;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    z-index: 1000;
+    position: fixed;
+    top: 1.825rem;
+    left: 50%;
+    transform: translateX(-50%);
     transition: transform 0.5s ease, opacity 0.5s ease, display 1s ease-in;
 }
+
 
 /* Hide the header when scrolling down */
 .header-hidden {
@@ -191,7 +221,7 @@ nav ul li a:hover {
 footer {
     margin: 0 auto;
     background-color: var(--secondary-color);
-    max-width: 80.5%;
+    width: 95%;
     height: 550px;
     border-radius: 20px;
     margin-bottom: 3rem;
@@ -309,7 +339,7 @@ footer {
 .home-about {
     display: flex;
     background-color: var(--primary-color);
-    height: 74vh;
+    height: 80vh;
 }
 
 .my-image {
@@ -333,13 +363,13 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 5rem;
-    gap: 2.7rem;
+    padding: 3rem;
+    gap: 2rem;
 }
 
 .home-about-text-header {
     font-family: 'Yeseva One', sans-serif;
-    font-size: var(--fifty-pixel-font-size);
+    font-size: 2.5rem;
     color: var(--secondary-color);
     text-align: left;
     align-self: flex-start;
@@ -349,7 +379,8 @@ footer {
 }
 
 .home-about-text-content{
-    font-size: var(--paragraph-text-size);
+    /* font-size: var(--paragraph-text-size); */
+    font-size: 0.8rem;
     color: var(--secondary-color);
     line-height: 1.5;
     font-weight: 100;
@@ -643,7 +674,6 @@ footer {
     justify-content: center;
     height: auto;
     background-color: var(--primary-color);
-    width: 80.5%;
     margin-top: 7.25rem;
 }
 
@@ -706,7 +736,6 @@ footer {
     justify-content: center;
     height: 74vh;
     background-color: var(--primary-color);
-    width: 80.5%;
 }
 
 .about-ending-container {
@@ -752,7 +781,6 @@ footer {
     display: flex;
     justify-content: center;
     height: auto;
-    width: 80.5%;
     margin-top: 11rem;
 }
 
@@ -888,7 +916,6 @@ footer {
     gap: var(--fifty-pixel-font-size);
     flex-direction: column;
     align-items: flex-start;
-    width: 80.5%;
 }
 
 .language-container {
@@ -969,7 +996,6 @@ footer {
     flex-direction: column;
     padding-top: 20px;
     gap: 2.7rem;
-    width: 80.5%;
 }
 
 .timeline-header {
@@ -1192,7 +1218,6 @@ footer {
     flex-direction: column;
     padding-top: 20px;
     gap: 2.7rem;
-    width: 80.5%;
 }
 
 .education-header {
@@ -1321,7 +1346,6 @@ footer {
 }
 
 .services-creative-writing {
-    width: 80.5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1842,7 +1866,6 @@ footer {
 }
 
 .works-section {
-    width: 78%;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -2257,7 +2280,7 @@ textarea {
     font-family: 'Helvetica', sans-serif;
 }
 
-@media (max-width: 955px) {
+@media screen and (max-width: 955px) {
     .header-main nav{
         display: none; /* Hide the header on mobile */
     }
@@ -2267,5 +2290,6 @@ textarea {
     }
     
 }
+
 
 

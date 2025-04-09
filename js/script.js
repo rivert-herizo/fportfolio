@@ -1,14 +1,51 @@
+// function loadComponent(id, file, callback) {
+//     fetch(file)
+//         .then(response => response.text())
+//         .then(data => {
+//             document.getElementById(id).innerHTML = data;
+//             if (callback) callback(); // Run callback after loading
+//         })
+//         .catch(error => console.error('Error loading', file, error));
+// }
+
+// loadComponent("header", "header.html", () => {
+//     let lastScrollY = window.scrollY;
+//     const header = document.querySelector("header");
+
+//     window.addEventListener("scroll", () => {
+//         if (window.scrollY > lastScrollY) {
+//             // Scrolling down: Hide the header
+//             header.classList.add("header-hidden");
+//         } else {
+//             // Scrolling up: Show the header
+//             header.classList.remove("header-hidden");
+//         }
+//         lastScrollY = window.scrollY;
+//     });
+
+// });
+
+// loadComponent("footer", "footer.html");
+
 function loadComponent(id, file, callback) {
     fetch(file)
         .then(response => response.text())
         .then(data => {
             document.getElementById(id).innerHTML = data;
+            
+            // Trigger reflow/repaint after loading the content
+            document.body.offsetHeight; // Forces reflow
+            
+            // Trigger a resize event to ensure responsiveness is applied
+            window.dispatchEvent(new Event('resize'));
+            
             if (callback) callback(); // Run callback after loading
         })
         .catch(error => console.error('Error loading', file, error));
 }
 
 loadComponent("header", "header.html", () => {
+    // Initialize the scroll behavior of the header
     let lastScrollY = window.scrollY;
     const header = document.querySelector("header");
 
@@ -23,10 +60,12 @@ loadComponent("header", "header.html", () => {
         lastScrollY = window.scrollY;
     });
 
+    // Reapply the responsiveness if needed
+    window.dispatchEvent(new Event('resize')); // Trigger resize after loading header
 });
 
-
 loadComponent("footer", "footer.html");
+
 
 // Lottie animations
 var animation1 = lottie.loadAnimation({
@@ -53,19 +92,6 @@ var animation3 = lottie.loadAnimation({
     path: 'js/lottie/scene-animation.json'
 });
 
-
-// function toggleMenu() {
-//     const menuIcon = document.querySelector(".menu-icon");
-//     const mobileMenu = document.querySelector(".header-mobile");
-
-//     menuIcon.classList.toggle("active");
-
-//     if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
-//         mobileMenu.style.display = "block";
-//     } else {
-//         mobileMenu.style.display = "none";
-//     }
-// }
 
 function toggleMenu() {
     const menuIcon = document.querySelector(".menu-icon");
