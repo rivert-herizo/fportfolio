@@ -412,13 +412,12 @@ footer {
 
 .home-services-cards{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .home-services-card {
-    width: 400px;
     height: 550px;
     display: flex;
     justify-content: space-around;
